@@ -1,0 +1,149 @@
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-image: url(image/airplane.jpg);
+    background-size: cover;
+}
+
+.container{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+}
+
+.imagencarruselContainer{
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+
+.slide_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 30px 0 30px;
+}
+
+.imagencarrusel{
+    position: relative;
+    height: 370px;
+    width: 240px;
+    filter: saturate(10%);
+    transition: 0.7s;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+}
+
+.button{
+    position: absolute;
+    width: 240px;
+    height: 370px;
+    transition: 0.7s;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+}
+
+.button:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#slider1:target ~ .imagencarruselContainer #img1,
+#slider1:target ~ .imagencarruselContainer #button1{
+    width: 390px;
+    height: 600px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slider2:target ~ .imagencarruselContainer #img2,
+#slider2:target ~ .imagencarruselContainer #button2{
+    width: 390px;
+    height: 600px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slider3:target ~ .imagencarruselContainer #img3,
+#slider3:target ~ .imagencarruselContainer #button3{
+    width: 390px;
+    height: 600px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slider4:target ~ .imagencarruselContainer #img4,
+#slider4:target ~ .imagencarruselContainer #button4{
+    width: 390px;
+    height: 600px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slider5:target ~ .imagencarruselContainer #img5,
+#slider5:target ~ .imagencarruselContainer #button5{
+    width: 390px;
+    height: 600px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slider6:target ~ .imagencarruselContainer #img6,
+#slider6:target ~ .imagencarruselContainer #button6{
+    width: 390px;
+    height: 600px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slider7:target ~ .imagencarruselContainer #img7,
+#slider7:target ~ .imagencarruselContainer #button7{
+    width: 390px;
+    height: 600px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+
+#slider1:target ~ .imagencarruselContainer{
+    left: 60%;
+}
+#slider2:target ~ .imagencarruselContainer{
+    left: 40%;
+}
+#slider3:target ~ .imagencarruselContainer{
+    left: 20%;
+}
+#slider4:target ~ .imagencarruselContainer{
+    left: 0%;
+}
+#slider5:target ~ .imagencarruselContainer{
+    left: -20%;
+}
+#slider6:target ~ .imagencarruselContainer{
+    left: -40%;
+}
+#slider7:target ~ .imagencarruselContainer{
+    left: -60%;
+}
+
+.imagencarrusel{height: 370px;}
+
+.read {
+    background: linear-gradient(90deg, #3730a3, #7e22ce); /* Gradiente de fondo */
+    padding: 12px; /* Espaciado interno */
+    color: #fff; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 8px; /* Bordes redondeados */
+  }

@@ -1,0 +1,326 @@
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+    font-family: 'Poppins', sans-serif; 
+}
+
+/* Fondo del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(image/fondo-pantalla-dia-mundial-turismo-viajes-simples_614679-362.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Navegación */
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation ul li {
+    display: inline-block;
+}
+
+.navigation ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 1px 2px;
+    transition: background-color 0.3s ease;
+}
+
+.navigation ul li a:hover {
+    background-color: #10c7d4;
+    border-radius: 5px;
+}
+
+/* Container */
+.container {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row; /* Cambia la dirección a fila */
+    flex-wrap: wrap; /* Permite que las tarjetas pasen a la siguiente fila si no caben */
+    gap: 20px;
+    justify-content: center; /* Centra las tarjetas en el contenedor */
+    padding: 20px;
+}
+
+/* Estilos de las tarjetas */
+.card {
+    background-color: transparent;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    width: 300px; /* Establece un ancho fijo para cada tarjeta */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+    border-radius: 10px;
+}
+
+/* Estilo alterno para tarjetas */
+.left {
+    align-self: flex-start;
+}
+
+.right {
+    align-self: flex-end;
+}
+
+/* Contenido de las tarjetas */
+h3 {
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+p {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+
+
+.card .logo {
+    margin-top: 10px;
+}
+
+/* Alineación horizontal de las tarjetas con contenido e imagen */
+.card.right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card.left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 10px 0; /* Aumenta el padding superior e inferior */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navegación */
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Añade margen superior para bajar el menú */
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Logo dentro del header */
+.header-content {
+    margin-right: 20px;
+}
+
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navegación */
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1px;
+}
+
+/* Lista de navegación */
+.navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    align-items: center; /* Asegura que todos los elementos del menú, incluidos los logos, estén alineados verticalmente */
+}
+
+/* Logo y otros contenidos */
+.header-content,
+.logo {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los logos */
+}
+
+.logo img {
+    display: block; /* Asegura que las imágenes no tengan espacio en línea sobrante */
+    margin-right: 1px; /* Espacio entre logos y otros elementos si es necesario */
+}
+
+.read {
+    background: linear-gradient(90deg, #3264ee, #22b4ce);
+    padding: 6px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+  }
+/* Estilos de las tarjetas */
+.card {
+    background-color: transparent; /* Fondo blanco con un poco de transparencia */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 45%;
+    display: flex; /* Hacer que el contenido sea flexible */
+    align-items: center; /* Alinear elementos verticalmente */
+    gap: 10px; /* Espaciado entre imagen y texto */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+    border-radius: 10px; /* Redondear esquinas de la imagen */
+}
+
+ /* Estilos del modal */
+ .modal {
+    display: none; /* Ocultar el modal por defecto */
+    position: fixed; /* Fijar la posición del modal */
+    z-index: 1000; /* Colocar el modal por encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    overflow: auto; /* Habilitar desplazamiento si es necesario */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con opacidad */
+}
+
+.modal-content {
+    background-color: #ffffff; /* Fondo blanco para el contenido del modal */
+    margin: 15% auto; /* Centrar el modal */
+    padding: 20px;
+    border: 1px solid #888; /* Borde gris */
+    border-radius: 10px; /* Esquinas redondeadas */
+    width: 300px; /* Ancho del modal */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+.close {
+    color: #aaa; /* Color del botón de cerrar */
+    float: right; /* Alinear a la derecha */
+    font-size: 28px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+    cursor: pointer; /* Cursor de puntero al pasar sobre el botón */
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* Color al pasar el mouse */
+    text-decoration: none; /* Sin subrayado */
+    cursor: pointer; /* Cursor de puntero */
+}
+
+h2 {
+    color: #007acc; /* Color del encabezado */
+    text-align: center; /* Centrar el texto */
+}
+
+label {
+    display: block; /* Bloque para que el input esté en la siguiente línea */
+    margin-top: 10px; /* Margen superior */
+}
+
+input[type="number"] {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    margin-top: 5px; /* Margen superior */
+    border: 1px solid #ddd; /* Borde gris claro */
+    border-radius: 5px; /* Esquinas redondeadas */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+input[type="number"]:focus {
+    border-color: #007acc; /* Borde azul al enfocar */
+    outline: none; /* Sin contorno */
+    box-shadow: 0 0 5px rgba(0, 122, 204, 0.3); /* Sombra azul */
+}
+
+h4{
+    color: #1eff00;
+}
+
+.nav__logo{
+    color: white;
+}
+
+button {
+    margin-top: 15px; /* Margen superior */
+    padding: 10px; /* Espaciado interno */
+    width: 100%; /* Ancho completo */
+    background-color: #007acc; /* Fondo azul */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Esquinas redondeadas */
+    cursor: pointer; /* Cursor de puntero */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+button:hover {
+    background-color: #005f99; /* Fondo más oscuro al pasar el mouse */
+}

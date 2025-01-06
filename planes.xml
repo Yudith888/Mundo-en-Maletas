@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<planesDeViaje>
+    <categoria nombre="Nacionales">
+        <ciudad>
+            <nombre>Armenia</nombre>
+            <descripcion>¡Vive una experiencia única en el corazón de Colombia!</descripcion>
+            <imagen>image/Armenia.jpg</imagen>
+            <enlace>armenia.php</enlace>
+        </ciudad>
+        <ciudad>
+            <nombre>Bogotá</nombre>
+            <descripcion>¡Bogotá te espera con los brazos abiertos!</descripcion>
+            <imagen>image/Bogota.jpg</imagen>
+            <enlace>bogota.php</enlace>
+        </ciudad>
+        <ciudad>
+            <nombre>Barranquilla</nombre>
+            <descripcion>¡Barranquilla, donde la diversión nunca termina!</descripcion>
+            <imagen>image/Barranquilla.jpg</imagen>
+            <enlace>barranquilla.php</enlace>
+        </ciudad>
+        <ciudad>
+            <nombre>Buenaventura</nombre>
+            <descripcion>¡Te  con los brazos abiertos en este paraíso costero!</descripcion>
+            <imagen>image/Buenaventura.jpg</imagen>
+            <enlace>buenaventura.php</enlace>
+        </ciudad>
+        <!-- Agrega más ciudades nacionales aquí -->
+    </categoria>
+    <categoria nombre="Internacionales">
+        <ciudad>
+            <nombre>Buenos Aires</nombre>
+            <descripcion>¡Buenos Aires te espera para cautivarte con su encanto único!</descripcion>
+            <imagen>image/Buenos Aires.jpeg</imagen>
+            <enlace>buenosaires.php</enlace>
+        </ciudad>
+        <ciudad>
+            <nombre>Chicago</nombre>
+            <descripcion>¡Chicago te espera para sorprenderte en cada esquina!</descripcion>
+            <imagen>image/Chicago.jpg</imagen>
+            <enlace>chicago.php</enlace>
+        </ciudad>
+        <ciudad>
+            <nombre>Ciudad de México</nombre>
+            <descripcion>¡La Ciudad de México te espera para cautivarte con su diversidad!</descripcion>
+            <imagen>image/Mexico.webp</imagen>
+            <enlace>ciudaddemexico.php</enlace>
+        </ciudad>
+        <ciudad>
+            <nombre>Hong Kong</nombre>
+            <descripcion>¡Déjate cautivar por la energía de esta metrópoli asiática!</descripcion>
+            <imagen>image/Hong Kong.jpg</imagen>
+            <enlace>hongkong.php</enlace>
+        </ciudad>
+        <!-- Agrega más ciudades internacionales aquí -->
+    </categoria>
+<categoria nombre="nacional"><ciudad><nombre>busan</nombre><descripcion>una gran ciudad</descripcion><imagen>image/barranquilla-sunset-landscape-light.jpg</imagen><enlace>busan.php</enlace></ciudad></categoria><categoria nombre="planesdeviaje.php"><ciudad><nombre>nigeria</nombre><descripcion>buena</descripcion><imagen>image/barranquilla-sunset-landscape-light.jpg</imagen><enlace>nigeria.php</enlace></ciudad><ciudad><nombre>nigeria</nombre><descripcion>buena</descripcion><imagen>image/barranquilla-sunset-landscape-light.jpg</imagen><enlace>nigeria.php</enlace></ciudad></categoria></planesDeViaje>

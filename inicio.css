@@ -1,0 +1,374 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --primary-color:var(--text-light);
+  --primary-color-dark:var(--text-light);
+  --text-dark: #eaedf3;
+  --text-light: #4f5761;
+  --extra-light: #f1f5f9;
+  --white: #ffffff;
+  --max-width: 1200px;
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 3rem 2rem;
+}
+
+.section__header {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 3rem;
+  color: var(--text-dark);
+}
+
+.btn {
+  padding: 0.75rem 2rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--white);
+  background-color:steelblue;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color:steelblue;
+}
+.btns{
+  padding: 0.75rem 2rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--white);
+  background-color:steelblue;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btns:hover {
+  background-color:steelblue;
+}
+
+a {
+  text-decoration: none;
+}
+
+i{
+    color: #f1f5f9;
+}
+.space a{
+  color: white;
+  font-size: 1rem;
+ 
+
+}
+
+select{
+   background-color: transparent;
+   color: #f1f5f9;
+   border: none;
+}
+.fa-search{
+  color: white;
+}
+
+
+option{
+    color: rgb(0, 0, 0);
+}
+.boton{
+  background-color: transparent;
+  color: white;
+}
+
+
+img {
+  width: 100%;
+  display: flex;
+}
+
+body {
+   background-image: url(image/Gemini_Generated_Image_t61ke9t61ke9t61k.jpg);
+   background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+   font-family: "Poppins", sans-serif;
+}
+
+nav {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.nav__logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.link a {
+  font-weight: 500;
+  color: var(--text-light);
+  transition: 0.3s;
+}
+
+.link a:hover {
+  color: var(--text-dark);
+}
+
+.header__container .section__header {
+  text-align: center;
+  font-size: 3rem;
+  line-height: 4rem;
+  
+}
+
+.section__header{
+  margin: 100px;
+}
+.booking__container {
+  border-radius: 2rem;
+  border: 1px solid var(--extra-light);
+  box-shadow: 5px 5px 30px rgba(141, 31, 31, 0.1);
+  margin-top: -80px;
+}
+
+.booking__nav {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  background-color: var(--extra-light);
+  border-radius: 5px;
+}
+
+.booking__nav span {
+  flex: 1;
+  padding: 1rem 2rem;
+  font-weight: 500;
+  color: var(--text-light);
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.booking__nav span:nth-child(2) {
+  color: var(--white);
+  background-color: var(--primary-color);
+}
+
+.booking__container form {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) auto;
+  gap: 1rem;
+  
+}
+
+.booking__container .input__content {
+  width: 100%;
+
+  
+}
+
+.booking__container .form__group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+ 
+}
+
+
+.booking__container .form__group span {
+  padding: 10px;
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  background-color: var(--extra-light);
+  border-radius: 1rem;
+  
+}
+
+.booking__container .input__group {
+  width: 100%;
+  position: relative;
+  
+}
+
+.booking__container label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.booking__container input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid var(--primary-color);
+ 
+  color: white;
+
+}
+
+.booking__container input:focus ~ label {
+  font-size: 0.8rem;
+  top: 0;
+}
+
+.booking__container .form__group p {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: black;
+}
+
+.booking__container .btn {
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+@media (width < 1200px) {
+  .section__container.header__container{
+    overflow: hidden;
+  }
+
+  
+}
+
+@media (width < 900px) {
+  nav .btn {
+    display: none;
+  }
+
+  .header__container img {
+    min-width: 900px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .booking__container form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer__container {
+    gap: 2rem;
+  }
+}
+@media (width < 600px) {
+  .nav__links {
+    display: none;
+  }
+
+  .booking__nav span {
+    padding: 1rem 0.5rem;
+  }
+
+  .booking__container form {
+    grid-template-columns: repeat(1, 1fr);
+  }
+ .footer__container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__bar {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.place{
+  position: absolute;
+  top: 10px;
+  left: 8px;
+  font-size: 14px;
+  padding: 0px 5px;
+  color: black;
+  transition: 0.3s;
+  pointer-events: none;
+}
+/* Estilos del encabezado */
+.menu {
+    position: fixed; /* Fija el encabezado en la parte superior de la página */
+    top: 0; /* Posiciona el encabezado en la parte superior */
+    width: 100%; /* Ancho del encabezado al 100% */
+    background-color: transparent; /* Fondo transparente para el encabezado */
+    padding: 1px 0; /* Espaciado superior e inferior para el encabezado */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Sombra sutil para el encabezado */
+    z-index: 1000; /* Asegura que el encabezado esté por encima de otros elementos */
+    display: flex; /* Utiliza Flexbox para alinear el contenido dentro del encabezado */
+    justify-content: center; /* Centra horizontalmente el contenido del encabezado */
+    align-items: center; /* Centra verticalmente el contenido del encabezado */
+    color: white; /* Color del texto en el encabezado */
+}
+
+/* Navegación */
+.navigation {
+    display: flex; /* Utiliza Flexbox para alinear los elementos del menú */
+    justify-content: center; /* Centra horizontalmente los elementos del menú */
+    align-items: center; /* Centra verticalmente los elementos del menú */
+    margin-top: 1px; /* Margen superior para el menú */
+}
+
+/* Lista de navegación */
+.navigation ul {
+    list-style: none; /* Elimina los estilos de lista de los elementos */
+    display: flex; /* Utiliza Flexbox para alinear los elementos de la lista en una fila */
+    gap: 30px; /* Espacio entre los elementos de la lista */
+    margin: 0; /* Elimina márgenes de la lista */
+    padding: 0; /* Elimina padding de la lista */
+    align-items: center; /* Asegura que todos los elementos del menú estén alineados verticalmente */
+}
+
+/* Logo y otros contenidos */
+.header-content,
+.logo {
+    display: flex; /* Utiliza Flexbox para alinear el contenido del encabezado */
+    align-items: center; /* Alinea verticalmente los logos y otros elementos */
+}
+
+.logo img {
+    display: block; /* Asegura que las imágenes no tengan espacio en línea sobrante */
+    margin-right: 1px; /* Espacio entre logos y otros elementos si es necesario */
+}
+
+/* Estilo para quitar las líneas de los enlaces en el menú */
+.navigation ul li a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: inherit; /* Mantiene el color del texto del enlace */
+}
+
+.navigation ul li a:hover {
+    text-decoration: none; /* Asegura que al pasar el mouse no se muestre el subrayado */
+}

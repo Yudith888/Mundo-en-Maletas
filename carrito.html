@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="men">
+        <nav class="navigation">
+            <ul>
+                <div class="header-content">
+                    <div class="logo"><img src="image/ilustracion-concepto-volando-alrededor-mundo-avion.png" alt="" width="80px" height="80px"></div>
+                    <div class="nav__logo">Sueños en Ruta</div>
+                </div>
+                <li class="link"><a href="planesdeviaje.php">Planes de viaje</a></li>
+                <li class="link"><a href="inicio.php">Vuelos</a></li>
+                <li class="link"><a href="oferta.php">Ofertas</a></li>
+                <li class="link"><a href="hoteleria.php">Hotelería</a></li>
+                <li class="link"><a href="loginadmi.php">Administrador</a></li> 
+                <a href="chatbot.php">
+                    <img src="image/138484452_b48c8274-61df-480f-9cd9-47d697ef03e9-Photoroom.png" width="60px" height="60px" alt=""/>
+                </a>
+                <div class="logo"><a href="compras.html"><img src="image/aterrizaje-unscreen.gif" alt="" width="50px" height="50px"></a></div>
+            </ul>
+        </nav>
+    </header>
+
+    <h2>Tu Carrito de Compras</h2>
+    <div id="cartItems"></div>
+
+    <center><button class="read" onclick="checkout()">Proceder al Pago</button></center>
+
+    <script>
+        // Mostrar los elementos del carrito almacenados en localStorage
+        window.onload = function() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartItemsDiv = document.getElementById('cartItems');
+            cartItemsDiv.innerHTML = '';
+
+            if (cart.length === 0) {
+                cartItemsDiv.innerHTML = '<p>No hay productos en tu carrito.</p>';
+            } else {
+                cart.forEach(item => {
+                    const itemDiv = document.createElement('div');
+                    itemDiv.classList.add('cart-item');
+                    itemDiv.innerHTML = `
+                        <p><strong>Destino:</strong> ${item.destination}</p>
+                        <p><strong>Nombre:</strong> ${item.name}</p>
+                        <p><strong>Correo:</strong> ${item.email}</p>
+                        <p><strong>Teléfono:</strong> ${item.phone}</p>
+                        <p><strong>Fecha de Viaje:</strong> ${item.travelDate}</p>
+                        <p><strong>Clase:</strong> ${item.classType}</p>
+                        <p><strong>Total:</strong> $${item.totalPrice.toLocaleString()}</p>
+                        <hr>
+                    `;
+                    cartItemsDiv.appendChild(itemDiv);
+                });
+            }
+        };
+
+        // Función para proceder al pago
+        function checkout() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            if (cart.length === 0) {
+                alert('Tu carrito está vacío.');
+            } else {
+                alert('Procediendo al pago...');
+                // Aquí podrías redirigir a otra página de pago o mostrar un resumen final
+            }
+        }
+    </script>
+</body>
+</html>

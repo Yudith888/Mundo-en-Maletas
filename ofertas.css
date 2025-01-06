@@ -1,0 +1,331 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(image/airplane.jpg);
+    background-size: cover;
+    margin: 0; /* Elimina el margen por defecto */
+}
+
+.birthdayCardContainer {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en múltiples líneas */
+    justify-content: space-between; /* Espacio entre tarjetas */
+    padding: 20px;
+    max-width: 800px; /* Limita el ancho del contenedor */
+    margin-top: 80px;
+}
+
+/* Estilos para la ventana modal */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 600px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.read {
+    background: linear-gradient(90deg, #3264ee, #22b4ce);
+    padding: 6px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+  }
+
+.birthdayCard {
+    color: white;
+    position: relative;
+    width: 250px;
+    height: 350px;
+    margin: 10px; /* Espacio entre tarjetas */
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform: perspective(2500px);
+    transition: 4s;
+}
+
+/* Efectos de hover para las tarjetas */
+.birthdayCard:hover {
+    transform: perspective(2500px) rotate(5deg);
+    box-shadow: inset 100px 20px 100px rgba(0,0,0,.15), 0 10px 100px rgba(0,0,0,0.3);
+}
+
+/* Cambios en la parte frontal de la tarjeta */
+.birthdayCard:hover .cardFront {
+    transform: rotateY(-160deg); 
+}
+
+.birthdayCard:hover .front-text,
+.birthdayCard:hover .wrap-deco,
+.birthdayCard:hover .wrap-decoTwo,
+.birthdayCard:hover .plate {
+    display: none; /* Ocultar elementos al hacer hover */
+}
+
+/* Estilos para la parte frontal de la tarjeta */
+.cardFront, .cardInside {
+    position: relative;
+    background-image: url(image/HD-wallpaper-background-blue-sky-sea-clouds-fondo-de-pantalla-para-telefonos-fondos-para-iphone-paisajes.jpg);
+    background-size: cover;
+    width: 250px;
+    height: 350px;
+    overflow: hidden;
+    transform-origin: left;
+    box-shadow: inset 100px 20px 100px rgba(0,0,0,.13), 30px 0 50px rgba(0,0,0,0.1);
+    transition: .4s;
+}
+
+/* Texto de la tarjeta */
+.happy, .toyou {
+    position: relative;
+    font-family: didot;
+    text-align: center;
+    backface-visibility: hidden;
+    font-size: 30px; 
+    
+}
+
+
+
+.happy { top: 198px; }
+.toyou { top: 123px; }
+
+.bday {
+    position: relative;
+    font-family: arial;
+    font-size: 35px;
+    text-align: center;
+    top: 163px;
+}
+
+/* Decoraciones */
+.wrap-deco {
+    position: absolute;
+    top: -230px;
+    left: -200px;
+}
+
+.decorations {
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    border: 3px solid #333;
+    border-radius: 50%;
+}
+
+/* Más decoraciones y efectos */
+.decorations:before, .decorations:after, .decorationsTwo:before, .decorationsTwo:after, .decorationsThree:before, .decorationsThree:after {
+    content: "";
+    position: absolute;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    width: 0;
+    height: 0;
+}
+
+/* Estilos adicionales para las decoraciones */
+.decorations:before { border-top: 40px solid #f15bb5; top: 297px; left: 210px; transform: rotate(-5deg); }
+.decorations:after { border-top: 40px solid #f4d35e; top: 288px; left: 260px; transform: rotate(-17deg); }
+.decorationsTwo:before { border-top: 40px solid #00f5d4; top: 268px; left: 315px; transform: rotate(-30deg); }
+.decorationsTwo:after, .decorationsThree:after { border-top: 40px solid #9b5de5; top: 238px; left: 355px; }
+
+.wrap-decoTwo {
+    transform: scaleX(-1);
+    position: absolute;
+    top: -230px;
+    left: 445px; 
+}
+
+.decorationsThree:before { border-top: 40px solid #00bbf9; top: 268px; left: 315px; transform: rotate(-30deg); }
+
+/* Placa y pastel */
+.plate {
+    position: absolute;
+    width: 130px;
+    height: 5px;
+    background-color: #00bbf9;
+    left: 60px;
+    top: 213px;
+}
+
+.cake {
+    position: absolute;
+    overflow: hidden;
+    width: 100px;
+    height: 50px;
+    background-color: #f15bb5;
+    border-radius: 10px 10px 0 0;
+    top: -50px;
+    left: 15px;
+    box-shadow: inset 0 -15px #f9c74f, inset 0 15px #432818;
+}
+
+/* Estilos para la llama del pastel */
+.flame {
+    position: absolute;
+    background-color: #fb5607;
+    border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
+    transform: rotate(-45deg);
+    width: 15px;
+    height: 15px;
+    opacity: 0.7;
+    top: -93px;
+    left: 57px;
+}
+
+/* Estilos para la parte interior de la tarjeta */
+.cardInside {
+    position: absolute;
+    background-color: #fff;
+    width: 250px;
+    height: 350px;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    box-shadow: inset 100px 20px 100px rgba(0,0,0,0.2);
+}
+
+/* Texto interior y deseos */
+.inside-text {
+    position: relative;
+    top: -160px;
+    transform: scale(0.7);
+}
+
+.wishes {
+    position: relative;
+    top: -100px;
+    margin: 25px;
+}
+
+p {
+    font-family: 'Brush Script MT', cursive;
+    color: #333;
+}
+
+.name {
+    margin-left: 150px;
+}
+/* Estilos generales para el modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semitransparente */
+}
+
+/* Contenedor de contenido del modal */
+.modal-content {
+    background-color: #f9f9f9;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+/* Botón de cierre */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Título del modal */
+.modal-content h3 {
+    font-size: 24px;
+    color: #0073e6;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilos para etiquetas y campos de entrada */
+.modal-content label {
+    display: block;
+    font-weight: bold;
+    color: #555;
+    margin-top: 15px;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="email"],
+.modal-content input[type="tel"],
+.modal-content input[type="date"],
+.modal-content select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Botón de reservar */
+.modal-content .read {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content .read:hover {
+    background-color: #005bb5;
+}
+
+/* Sombra al hacer clic en los campos */
+.modal-content input[type="text"]:focus,
+.modal-content input[type="email"]:focus,
+.modal-content input[type="tel"]:focus,
+.modal-content input[type="date"]:focus,
+.modal-content select:focus {
+    border-color: #0073e6;
+    box-shadow: 0px 0px 5px rgba(0, 115, 230, 0.3);
+    outline: none;
+}
